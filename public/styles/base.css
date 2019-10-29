@@ -1,7 +1,19 @@
 *{
-  background-color: forestgreen;
+  background-image: url(photos/canva-bookshelves.jpg);
+  background-size: cover;
+  height: 100%;
+  background-repeat: no-repeat, repeat;
   color: wheat;
   text-align: center;
+}
+body{
+  height: 300px;
+}
+input{
+  background-image: none;
+  background-color: #8b6c5b;
+  height: 20%;
+  margin:auto;
 }
 h1{
   color:pink;

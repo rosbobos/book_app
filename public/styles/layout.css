@@ -1,0 +1,38 @@
+@media (max-width: 768px){
+  /* for mobile */
+  *{
+    color: #343d3b;
+  }
+  body{
+    background-image: none;
+    margin:0;
+  }
+  main{
+    background-image: none;
+    background-color: #b79a88;
+    margin:0;
+    line-height: 20px;
+  }
+  fieldset{
+    background-image: none;
+    margin:0;
+  }
+  span{
+    background-image: none;
+    background-color: #406570;
+    color: #b2280f;
+    margin:0;
+  }
+  label{
+    background-image: none;
+    background-color: #406570;
+    margin:0;
+  }
+  button{
+    background-image: none;
+    background-color: #b2280f;
+    height: 10%;
+    width:15%;
+    margin:0;
+  }
+}
