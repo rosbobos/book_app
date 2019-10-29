@@ -2,7 +2,7 @@
   "name": "book_app",
   "version": "1.0.0",
   "description": "**Author**: Rosalyn Johnson and DJ Grant **Version**: 1.0.0 (increment the patch/fix version number if you make more commits past your first submission)",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,6 +19,7 @@
   "homepage": "https://github.com/rosbobos/book_app#readme",
   "dependencies": {
     "dotenv": "^8.2.0",
+    "ejs": "^2.7.1",
     "express": "^4.17.1",
     "superagent": "^5.1.0"
   }

@@ -33,12 +33,12 @@ Actual time needed to complete: 28min
 
 
 
-Number and name of feature: 
+Number and name of feature: working on first trello requirment
 
-Estimate of time needed to complete: 30min
+Estimate of time needed to complete: 40
 
-Start time: 9:19
+Start time: 9:47
 
-Finish time: 9:46
+Finish time: 
 
-Actual time needed to complete: 28min
+Actual time needed to complete: 
