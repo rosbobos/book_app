@@ -35,7 +35,7 @@ function newSearch(request, response) {
 
 function searchForBooks(request, response) {
   console.log(request.body.search);
-  
+
   const bookSearchedFor = request.body.search[0];
   const typeOfSearch = request.body.search[1];
 
@@ -70,6 +70,10 @@ function searchForBooks(request, response) {
 function Book(bookObj) {
   const bookImage = `https://i.imgur.com/J5LVHEL.jpg`;
   this.title = bookObj.title || 'no title available';
+  this.author = bookObj.author || 'no author available';
+  this.description = bookObj.description || 'no description available';
+  this.isb = bookObj.isb || 'no isb available';
+  this.bookshelf = bookObj.bookshelf || 'no input';
 
 }
 
