@@ -2,15 +2,15 @@
 
 const express = require('express');
 require('dotenv').config();
+const pg = require('pg');
 require('ejs');
 const superagent = require('superagent');
-const pg = require('pg');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
-
-app.use(express.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
+app.use(express.urlencoded({ extended: true }));
+
 // app.use(express.static('public'));
 const client = new pg.Client(process.env.DATABASE_URL);
 client.on('error', err => {
@@ -35,6 +35,7 @@ function newSearch(request, response) {
 
 function searchForBooks(request, response) {
   console.log(request.body.search);
+  
   const bookSearchedFor = request.body.search[0];
   const typeOfSearch = request.body.search[1];
 
