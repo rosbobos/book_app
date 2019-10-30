@@ -27,31 +27,34 @@ function searchForBooks(request, response) {
 
   let url = `https://www.googleapis.com/books/v1/volumes?q=`;
 
-}
-
-if (typeOfSearch === 'title') {
-  url += `+intitle:${bookSearchedFor}`;
-}
-
-if (typeOfSearch === 'author') {
-  url += `+inauthor:${bookSearchedFor}`;
-}
-
-superagent.get(url)
-  .then(results => {
-    const bookArray = results.body.items.map(book => {
-      return new book(book.volumeInfo);
+  if (typeOfSearch === 'title') {
+    url += `+intitle:${bookSearchedFor}`;
+  }
+  
+  if (typeOfSearch === 'author') {
+    url += `+inauthor:${bookSearchedFor}`;
+  }
+  
+  superagent.get(url)
+    .then(results => {
+      // console.log(results.body.items);
+      const bookArray = results.body.items.map(book => {
+        return new Book(book.volumeInfo);
+      })
+      console.log(bookArray);
+      response.status(200).render('pages/searches/show', {bookArray: bookArray});
     })
+  
+    .catch(error => {
+      console.error('ruh roh, we messed up!');
+    })
+}
 
-    response.status(200).render('pages/searches/show');
-  })
 
-  .catch(error => {
-    console.error('ruh roh, we messed up!');
-  })
 
 function Book(bookObj) {
   const bookImage = `https://i.imgur.com/J5LVHEL.jpg`;
+  this.title = bookObj.title || 'no title available';
 
 }
 
