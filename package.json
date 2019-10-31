@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "**Author**: Rosalyn Johnson and DJ Grant **Version**: 1.0.0 (increment the patch/fix version number if you make more commits past your first submission)",
   "main": "server.js",
+  "engines": {
+    "node": "10.16.3"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
