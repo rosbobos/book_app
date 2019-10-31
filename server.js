@@ -10,6 +10,7 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static('./public'));
 
 // app.use(express.static('public'));
 const client = new pg.Client(process.env.DATABASE_URL);
