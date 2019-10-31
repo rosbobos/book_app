@@ -13,6 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // app.use(express.static('public'));
 const client = new pg.Client(process.env.DATABASE_URL);
+client.connect();
 client.on('error', err => {
   console.error(err);
 })
@@ -30,6 +31,9 @@ function newSearch(request, response) {
     .then(sqlResults => {
       const bookArray = sqlResults.rows;
       response.render('pages/index', {books: bookArray});      
+    })
+    .catch(err =>{
+      console.error(err);
     })
 }
 
