@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../../layout/head') %>
+
+
+<body>
+
+  <main>
+      <%- include('../../layout/header') %>
+      <section class="create-view container">
+          <h2 class="view-title">Add a book</h2>
+          <form action="/add" method="post">
+            <input type="hidden" name="_method" value="post">
+            <input type="text" name="title" placeholder="Book Name">
+            <textarea name="description" placeholder="Description of the book" cols="30" rows="10"></textarea>
+            <input type="text" name="author" placeholder="That one guy">
+            <input type="text" name="bookshelf" placeholder="That on genre">
+            <button type="submit">Add This Book</button>
+          </form>
+      </section>
+    
+  </main>
+
+</body>
+
+<footer>
+
+</footer>
+
+</html>

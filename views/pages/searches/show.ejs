@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <%- include('../../layout/head') %>
+    
+<body>
+
+  <%- include('../../layout/header') %>
+  <main>
+    <h1>Proof of life</h1>
+    
+<% bookArray.forEach(booksToRead => { %>
+  <section>
+    <img src= "<%= booksToRead.book_image %>"
+    <p>Title: <%= booksToRead.title %></p>  
+    <p>Authour: <%= booksToRead.author %></p>
+    <p>Desription: <%= booksToRead.description %></p>
+    <p>ISBN: <%= booksToRead.isb %> </p>
+    <p>Book Shelf <%= booksToRead.bookshelf %></p>
+
+  </section>
+  <% }) %>
+  </main>
+</body>
+
+</html>

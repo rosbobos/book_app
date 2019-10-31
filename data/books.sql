@@ -8,3 +8,5 @@ CREATE TABLE books (
   isb VARCHAR(30),
   bookshelf VARCHAR(100)
 );
+
+INSERT INTO books (title, author, bookshelf) VALUES ('Harry potter', 'J.K. Rowling', 'da best');
