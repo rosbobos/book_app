@@ -13,10 +13,15 @@ app.use(express.urlencoded({ extended: true }));
 
 // app.use(express.static('public'));
 const client = new pg.Client(process.env.DATABASE_URL);
-client.connect();
 client.on('error', err => {
   console.error(err);
 })
+client.connect()
+  .then(() => {
+    app.listen(PORT, ()=>{
+      console.log(`turned up on ${PORT}`)
+    })
+  })
 
 app.get('/', newSearch);
 // TODO: check to get all app.get for functions for new pages
@@ -81,4 +86,4 @@ function Book(bookObj) {
 
 }
 
-app.listen(PORT, () => { console.log(`turned up on ${PORT}`) });
+// app.listen(PORT, () => { console.log(`turned up on ${PORT}`) });
