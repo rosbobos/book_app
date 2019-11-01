@@ -16,8 +16,20 @@
     <p>Desription: <%= booksToRead.description %></p>
     <p>ISBN: <%= booksToRead.isb %> </p>
     <p>Book Shelf <%= booksToRead.bookshelf %></p>
-
   </section>
+  <section>
+    <form action="/books" method="post">
+      <fieldset>
+        <input name="<%= title %>" value="<%= book.title %>"/>
+        <input name="<%= author %>" value="<%= book.author %>"/>
+        <input name="<%= description %>" value="<%= book.description %>"/>
+        <input name="<%= bookshelf %>" value="<%= book.bookshelf %>"/>
+        <button>submit</button>
+
+      </fieldset>
+    </form>
+  </section>
+
   <% }) %>
   </main>
 </body>
