@@ -6,10 +6,18 @@ body{
   background-image: url(photos/canva-bookshelves.jpg);
   background-size: cover;
   /* background-repeat: no-repeat, repeat; */
-  font-size: 8vw;
+  font-size: 5vw;
 }
 input{
   /* background-color: #8b6c5b; */
   height: 20%;
   margin:auto;
+}
+button{
+  height:20px;
+  width: 50px;
+}
+fieldset input{
+  height: 15px;
+  width: 15px;
 }
