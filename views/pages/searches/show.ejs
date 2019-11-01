@@ -20,10 +20,12 @@
   <section>
     <form action="/books" method="post">
       <fieldset>
-        <input name="<%= title %>" value="<%= book.title %>"/>
-        <input name="<%= author %>" value="<%= book.author %>"/>
-        <input name="<%= description %>" value="<%= book.description %>"/>
-        <input name="<%= bookshelf %>" value="<%= book.bookshelf %>"/>
+        <input name="title" value="<%= booksToRead.title %>"/>
+        <input name="author" value="<%= booksToRead.author %>"/>
+        <input name="description" value="<%= booksToRead.description %>"/>
+        <input name="bookshelf" value="<%= booksToRead.bookshelf %>"/>
+        <input name="isb" value="<%= booksToRead.isb %>"/>
+        <input name="book_image" value="<%= booksToRead.book_image %>"/>
         <button>submit</button>
 
       </fieldset>

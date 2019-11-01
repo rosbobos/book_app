@@ -58,12 +58,12 @@ Actual time needed to complete: 6 minutes
 
 
 
-Number and name of feature: browse search results
+Number and name of feature: compeating radio for submitting newbook
 
-Estimate of time needed to complete: 40min
+Estimate of time needed to complete: 30min
 
-Start time: 9:45
+Start time: 10:34
 
-Finish time: 9:25
+Finish time: 
 
-Actual time needed to complete: 6 minutes
+Actual time needed to complete: 
