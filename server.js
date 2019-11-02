@@ -26,9 +26,10 @@ client.connect()
 app.get('/', homePage);
 app.get('/searches', searchPage);
 app.get('/searches/form', formPage);
-app.get('/searches/show', showPage);
+// app.get('/searches/show', showPage);
+app.post('/books', addBook)
 app.get('/books/:id',getBook);
-app.post('/searches/new', addBook);
+// app.post('/searches/new', addBook);
 app.post('/searches', searchForBooks);
 
 
@@ -77,8 +78,9 @@ function getBook(request, response){
 }
 
 function addBook(request, response){
+  console.log('you made it============================')
 let {book_image, title, author, description, isb, bookshelf} = request.body;
-let sql = 'INSERT INTO book_app (book_image, title, author, description, isb, bookshelf) VALUES ($1, $2, $3, $4, $5, $6);';
+let sql = 'INSERT INTO books (book_image, title, author, description, isb, bookshelf) VALUES ($1, $2, $3, $4, $5, $6);';
 let values = [book_image, title, author, description, isb, bookshelf];
 return client.query(sql, values)
   .then(response.redirect('/'))
