@@ -1,11 +1,14 @@
 *{
-  color: wheat;
+  color: whitesmoke;
   text-align: center;
 }
 body{
-  background-image: url(photos/canva-bookshelves.jpg);
+  background-image: url(photos/Canva-OpenedBook.jpg);
   background-size: cover;
-  /* background-repeat: no-repeat, repeat; */
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
   font-size: 5vw;
 }
 input{
