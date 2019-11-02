@@ -9,15 +9,15 @@
     <h1>Proof of life</h1>
     
 <% bookArray.forEach(booksToRead => { %>
-  <section>
-    <img src= "<%= booksToRead.book_image %>"
+  <section id="showPage">
+    <img src= "<%= booksToRead.book_image %>"/>
     <p>Title: <%= booksToRead.title %></p>  
-    <p>Authour: <%= booksToRead.author %></p>
-    <p>Desription: <%= booksToRead.description %></p>
+    <p>Author: <%= booksToRead.author %></p>
+    <p>Description: <%= booksToRead.description %></p>
     <p>ISBN: <%= booksToRead.isb %> </p>
     <p>Book Shelf <%= booksToRead.bookshelf %></p>
   </section>
-  <section>
+  <section id="searchResultsForm">
     <form action="/books" method="post">
       <fieldset>
         <input name="title" value="<%= booksToRead.title %>"/>
